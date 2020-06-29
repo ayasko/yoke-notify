@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: yoke-notify
+    
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: yoke-configserver
+      
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8580/eureka
