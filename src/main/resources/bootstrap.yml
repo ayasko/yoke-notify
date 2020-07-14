@@ -1,14 +1,16 @@
 spring:
   application:
     name: yoke-notify
-    
   cloud:
     config:
       discovery:
         enabled: true
         service-id: yoke-configserver
+      fail-fast: true
       
 eureka:
+  instance:
+    preferIpAddress: true
   client:
     serviceUrl:
-      defaultZone: http://localhost:8580/eureka
+      defaultZone: http://yoke-serviceregistry:8580/eureka/
