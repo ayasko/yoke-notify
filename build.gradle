@@ -32,7 +32,10 @@ dependencies {
   implementation 'org.springframework.boot:spring-boot-starter-web'
   implementation 'org.springframework.cloud:spring-cloud-starter-config'  
   implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
-
+  implementation 'org.springframework.cloud:spring-cloud-stream'
+  implementation 'org.springframework.cloud:spring-cloud-stream-binder-kafka'
+  implementation 'org.springframework.retry:spring-retry'
+  
   compileOnly group: 'org.projectlombok', name: 'lombok', version: "${project.('lombok.version')}"
   annotationProcessor group: 'org.projectlombok', name: 'lombok', version: "${project.('lombok.version')}"
 

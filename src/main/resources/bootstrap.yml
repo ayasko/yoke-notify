@@ -7,10 +7,12 @@ spring:
         enabled: true
         service-id: yoke-configserver
       fail-fast: true
-      
+      retry:
+       initial-interval: 15000
+       multiplier: 1.5
+       max-attempts: 10
+       
 eureka:
-  instance:
-    preferIpAddress: true
   client:
     serviceUrl:
-      defaultZone: http://yoke-serviceregistry:8580/eureka/
+      defaultZone: ${EUREKA_SERVER:http://yoke-serviceregistry:8580/eureka}

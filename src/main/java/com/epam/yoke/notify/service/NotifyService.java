@@ -1,4 +1,4 @@
-package com.epam.yoke.notify.service;
+ package com.epam.yoke.notify.service;
 
 import com.epam.yoke.notify.mapper.EventMapper;
 import com.epam.yoke.notify.model.Event;
